@@ -48,7 +48,7 @@ public class postApiTest extends baseClass {
 
 		mapper.writeValue(new File("C:/Users/mishrrit/eclipse-workspace/restapi/src/main/java/com/data/user.json"),user);
 		
-		//Java Object to Java String
+		//Java Object to Java String --Marshalling 
 		String jsonresp = mapper.writeValueAsString(user);
 		System.out.println("User json string is --->" + jsonresp);
 
@@ -63,7 +63,7 @@ public class postApiTest extends baseClass {
 		JSONObject responseJson = new JSONObject(responseBody);
 		System.out.println("-----------------Response from Json ----" + responseJson);
 		
-		//Java String to Java Object
+		//Java String to Java Object-- UnMarshalling
 		User user1 = mapper.readValue(responseBody, User.class);
 		System.out.println(user1);
 

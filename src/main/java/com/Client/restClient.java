@@ -18,9 +18,7 @@ public class restClient {
 	public CloseableHttpResponse get(String url) throws ClientProtocolException, IOException {
 
 		CloseableHttpClient httpclient = HttpClients.createDefault();
-		//CloseableHttpClient httpclient = HttpClients.createSystem();
 		HttpGet httpGet = new HttpGet(url);
-		//System.setProperty("java.net.useSystemProxies", "true");
 		CloseableHttpResponse Response = httpclient.execute(httpGet);
 		return Response;
 	}
@@ -50,7 +48,7 @@ public class restClient {
 
 	}
 	
-	// 3. POST Method 
+	// 4. POST Method 
 		public CloseableHttpResponse Post(String url,String entityString,HashMap<String, String> headermap) throws ClientProtocolException, IOException {
 
 			CloseableHttpClient ClosehttpClient = HttpClients.createDefault();

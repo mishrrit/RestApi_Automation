@@ -113,23 +113,5 @@ public class getAPITest extends baseClass {
 		System.out.println("------------ Headers are ----\n" + hashMap);
 	}
 
-	@Test(priority= 3)
-	public void PostApiTest(String url) throws ClientProtocolException, IOException {
-		rest = new restClient();
-		//Response = rest.Post(apiUrl);
-		
-		HashMap<String, String> headermap = new HashMap<String, String>();
-		headermap.put("Content-Type", "appication/json");
-		
-		//Jackson api
-		ObjectMapper mapper = new ObjectMapper();
-		User user = new User("morpheus","leader");
-		mapper.writeValue(new File("C:\\Users\\mishrrit\\eclipse-workspace\\restapi\\src\\main\\java\\com\\data\\user.json"), user);
-
-		// a. Get Status Code
-		/*int StatusCode = Response.getStatusLine().getStatusCode();
-		System.out.println("Status Code #####" + StatusCode);
-		Assert.assertEquals(StatusCode, RESP_STATUS_CODE_200, "In Valid Status Code");*/
-
-	}
+	
 }
